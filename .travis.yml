@@ -20,3 +20,22 @@ after_success:
   - docker push duong1200798/multi-nginx
   - docker push duong1200798/multi-server
   - docker push duong1200798/multi-worker
+deploy:
+  # fix elasticbeanstalk
+  provider: elasticbeanstalk
+  # region in aws choose
+  region: "ap-southeast-1"
+  # elasticbeanstalk app name
+  app: "multi-docker"
+  # elasticbeanstalk app name-env
+  env: "MultiDocker-env"
+  # when create elasticbeanstalk => s3 auto create new S3 function
+  bucket_name: "elasticbeanstalk-ap-southeast-1-195211018705"
+  # in S3 function need create new folder directory "example - multi-docker"
+  bucket_path: "multi-docker"
+  on:
+    branch: master
+  # when create new IAM user have $AWS_ACCESS_KEY and $AWS_SECRET_KEY => add to travis-ci
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
