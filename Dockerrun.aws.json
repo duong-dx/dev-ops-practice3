@@ -10,10 +10,7 @@
     },
     {
       "name": "server",
-      "image": {
-        "name": "duong1200798/multi-server",
-        "update": true
-      },
+      "image": "duong1200798/multi-server",
       "hostname": "api-server",
       "essential": false,
       "memory": 128
@@ -30,7 +27,7 @@
       "image": "duong1200798/multi-nginx",
       "hostname": "nginx",
       "essential": true,
-      "portMapping": [
+      "portMappings": [
         {
           "hostPort": "80",
           "containerPort": "80"
