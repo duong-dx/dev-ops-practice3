@@ -28,7 +28,7 @@ deploy:
   # elasticbeanstalk app name
   app: "multi-docker"
   # elasticbeanstalk app name-env
-  env: "MultiDocker-env"
+  env: "Multidocker-env-1"
   # when create elasticbeanstalk => s3 auto create new S3 function
   bucket_name: "elasticbeanstalk-ap-southeast-1-195211018705"
   # in S3 function need create new folder directory "example - multi-docker"
