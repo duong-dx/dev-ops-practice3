@@ -3,10 +3,7 @@
   "containerDefinition": [
     {
       "name": "client",
-      "image": {
-        "name": "duong1200798/multi-client",
-        "update": true
-      },
+      "image": "duong1200798/multi-client",
       "hostname": "react-client",
       "essential": false,
       "memory": 128
@@ -23,20 +20,14 @@
     },
     {
       "name": "worker",
-      "image": {
-        "name": "duong1200798/multi-worker",
-        "update": true
-      },
+      "image": "duong1200798/multi-worker",
       "hostname": "worker",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": {
-        "name": "duong1200798/multi-nginx",
-        "update": true
-      },
+      "image": "duong1200798/multi-nginx",
       "hostname": "nginx",
       "essential": true,
       "portMapping": [
