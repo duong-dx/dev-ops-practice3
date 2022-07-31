@@ -33,6 +33,7 @@ deploy:
   bucket_name: "elasticbeanstalk-ap-southeast-1-195211018705"
   # in S3 function need create new folder directory "example - multi-docker"
   bucket_path: "multi-docker"
+  edge: true  # This supposedly opts in to deploy v2.
   on:
     branch: master
   # when create new IAM user have $AWS_ACCESS_KEY and $AWS_SECRET_KEY => add to travis-ci
